@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({super.key});
 
-  String _currentFortune = "";
+  final String _currentFortune = "";
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -69,6 +69,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Image.asset(
+              'assets/images/cookie.png',
+              width: 200,
+              height: 200,
+              fit: BoxFit.cover,
+            ),
             Text(
               'Your fortune is: ',
               style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
@@ -77,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  '${_currentFortune}',
+                  _currentFortune,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
