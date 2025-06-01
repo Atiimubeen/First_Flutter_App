@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({super.key});
 
-  final String _currentFortune = "";
+  final String _currentFortune = "First click me";
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
